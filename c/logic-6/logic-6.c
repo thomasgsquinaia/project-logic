@@ -5,6 +5,7 @@ int main() {
 
   printf("Digite o comprimento do lado do quadrado: ");
   scanf("%f", &lado);
+  
   area = lado * lado;
   printf("Área do quadrado é igual a: %2.f\n", area);
 
