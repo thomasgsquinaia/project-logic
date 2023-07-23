@@ -12,5 +12,5 @@ int main() {
   pesoHomem = (72.7 * altura) - 58;
   pesoMulher = (62.1 * altura) - 44.7;
 
-  printf("O peso ideial para o homem é de %2.fKg e para a mulher é de %2.fKg\n", pesoHomem, pesoMulher);
+  printf("O peso ideal para o homem é de %2.fKg e para a mulher é de %2.fKg\n", pesoHomem, pesoMulher);
 }
