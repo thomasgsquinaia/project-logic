@@ -7,9 +7,7 @@
 
 int main() {
   float horasTrabalhadasMes, salarioPorHora, somaLiquido, somaDescontos, somaSalarioMesBruto, impostoRenda, sindicato, inss;
-  char porcentagem;
-
-  porcentagem="%c";
+  
   printf("Digite o valor da sua hora: ");
   scanf("%f", &salarioPorHora);
 
@@ -17,16 +15,16 @@ int main() {
   scanf("%f", &horasTrabalhadasMes);
 
   somaSalarioMesBruto = salarioPorHora * horasTrabalhadasMes;
-  impostoRenda = (somaSalarioMesBruto * (11/100));
-  inss = (somaSalarioMesBruto * (8/100));
-  sindicato = (somaSalarioMesBruto * (5/100));
+  impostoRenda = somaSalarioMesBruto * (11/100);
+  inss = somaSalarioMesBruto * (8/100);
+  sindicato = somaSalarioMesBruto * (5/100);
   somaDescontos = impostoRenda + inss + sindicato;
   somaLiquido = somaSalarioMesBruto - somaDescontos;
 
   printf("+ Salário Bruto: R$%2.f\n", somaSalarioMesBruto);
-  printf("- IR (11%c): R$%2.f\n", impostoRenda);
-  printf("- INSS: R$%2.f\n", inss);
-  printf("- Sindicato: R$%2.f\n", sindicato);
+  printf("- IR (11 porcento): R$%2.f\n", impostoRenda);
+  printf("- INSS (8 porcento): R$%2.f\n", inss);
+  printf("- Sindicato (5 porcento): R$%2.f\n", sindicato);
   printf("= Salário Líquido: R$%2.f\n", somaLiquido);
 
 
