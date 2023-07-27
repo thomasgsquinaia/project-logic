@@ -15,9 +15,9 @@ int main() {
   scanf("%f", &horasTrabalhadasMes);
 
   somaSalarioMesBruto = salarioPorHora * horasTrabalhadasMes;
-  impostoRenda = somaSalarioMesBruto * (11/100);
-  inss = somaSalarioMesBruto * (8/100);
-  sindicato = somaSalarioMesBruto * (5/100);
+  impostoRenda = (somaSalarioMesBruto-(somaSalarioMesBruto * 0.11));
+  inss = (somaSalarioMesBruto-(somaSalarioMesBruto * 0.8));
+  sindicato = (somaSalarioMesBruto-(somaSalarioMesBruto * 0.5));
   somaDescontos = impostoRenda + inss + sindicato;
   somaLiquido = somaSalarioMesBruto - somaDescontos;
 
