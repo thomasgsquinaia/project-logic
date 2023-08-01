@@ -5,36 +5,35 @@
 #include <stdio.h>
 
 int main () {
-  float areaQuadrada, resLitros,rendeUmLitro, valorTotal, lataDeTinta, resLatas;
+  float areaQuadrada, resLitros,rendeUmLitro, lataDeTinta, resLatas,valorLataTinta, total;
   // QUARTA PROPORCIONAL
   // 1 LITRO ----------- 3 METROS
   // X LITRO ----------- areaQuadrada
   //1 lata de 18 litros cobre 3x18=54metro2
 
-  printf("Digite a area quadrada a ser pintada: ");
+  printf("Digite a área quadrada a ser pintada: ");
   scanf("%f", &areaQuadrada);
 
   //Quantidade de latas de tinta 1litro faz 3metros quadrados => 
   rendeUmLitro = 3; //metros
   lataDeTinta = 18; //litros
+  valorLataTinta = 80;
   resLitros = areaQuadrada/rendeUmLitro;  
   resLatas = resLitros / lataDeTinta;
+  total = resLatas * valorLataTinta;
 
-  if(resLatas < 18) {
-     printf("Litros: ", resLitros);
+  if(resLitros < 18) {
+    printf("Litros: %2.f\n", resLitros);
+    printf("Total a ser pago: %2.f\n", valorLataTinta);
+    printf("Neste caso compre uma lata de tinta por %2.f\n", valorLataTinta);
+    printf("A quantidade de latas a serem compradas é de 1 e o total a ser pago é de %2.f\n", valorLataTinta);
   };
 
-  if(resLatas >= 18) {
-    printf("Latas: ", resLatas);
+  if(resLitros >= 18) {
+    printf("Latas: %2.f\n", resLatas);
+    printf("Total a ser pago: %2.f\n", total);
+    printf("A quantidade de latas a serem compradas é de %2.f e o total a ser pago é de R$%2.f\n", resLatas, total);
   }
-
-  //Quanto vou pagar? cada lata é 80reais => 
-  if(resLitros > 54) {
-    printf("A quantidade de latas a serem compradas é de %2.f e o total é de %2.f\n", resLatas, valorTotal);
-  };
-  if(resLitros > 0 && resLitros <=54) {
-    printf("A quantidade de latas a serem compradas é de %2.f  e o total é de %2.f\n", resLatas, valorTotal);
-  };
 
   return 0;
 }
