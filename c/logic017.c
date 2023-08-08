@@ -7,5 +7,6 @@ int main() {
   float sizeFile, speedInternet; 
   printf("digite o tamanhoo do arquivo para download: ");
   scanf("%f", &sizeFile);
+  printf("ola")
   return 0;
 }
