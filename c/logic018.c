@@ -4,8 +4,9 @@
 
 int main() {
   float n1, n2;
-  int n = 1;
-
+  int n;
+  
+  n = 1;
   while (n != 0) {
       printf(" =========== Digite o número 0 para parar após digitar dois numeros ou mais!! ===========\n");
       printf("Digite um número: \n");
