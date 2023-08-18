@@ -25,11 +25,6 @@ int main() {
     }
   }
   printf("Fim");
-
-
-  // if(n1 == n2) { 
-  //   printf("Os números são iguais");
-  // }
   
   return 0;
 }
