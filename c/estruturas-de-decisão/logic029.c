@@ -23,14 +23,21 @@ No exemplo o valor da hora é 5 e a quantidade de hora é 220.
 
 int main()
 {
-    float valorHora, qtdHorasMes;
+    float valorHora, qtdHorasMes, salarioBruto, descontoIR;
 
     printf("Digite o valor da sua hora:")
     scanf("%f", &valorHora);
     printf("Digite a quantidade de horas que você trabalhou no mês:");
     scanf("%f", &qtdHorasMes);
 
-    //contas
+    salarioBruto = valorHora * qtdHorasMes;
+
+    if(salarioBruto <= 900) {
+        descontoIR = 0.0; 
+    } 
+    else if (salarioBruto <= 1500) {
+        descontoIR = 0.10;
+    }
 
     return 0;
 }
