@@ -23,9 +23,9 @@ No exemplo o valor da hora é 5 e a quantidade de hora é 220.
 
 int main()
 {
-    float valorHora, qtdHorasMes, salarioBruto, descontoIR;
+    float valorHora, qtdHorasMes, salarioBruto, descontoIR, salarioLiquido, Ir, Inss, Fgts, subDiff;
 
-    printf("Digite o valor da sua hora:")
+    printf("Digite o valor da sua hora:");
     scanf("%f", &valorHora);
     printf("Digite a quantidade de horas que você trabalhou no mês:");
     scanf("%f", &qtdHorasMes);
@@ -36,8 +36,33 @@ int main()
         descontoIR = 0.0; 
     } 
     else if (salarioBruto <= 1500) {
+        descontoIR = 0.05;
+    }
+    else if (salarioBruto <= 2500) {
         descontoIR = 0.10;
+    } 
+    else if (salarioBruto > 2500) {
+        descontoIR = 0.20;
+    }
+    else {
+        printf("Deu ruim os ifs acima!");
     }
 
+    Ir = salarioBruto * (descontoIR / 100);
+    Inss = salarioBruto * (10.0 / 100);
+    Fgts = salarioBruto * (5.0 / 100);
+    subDiff = Inss + Fgts;
+    salarioLiquido = salarioBruto - subDiff;
+
+    printf("=============================\n");
+    printf(" Salário Bruto: R$%2.f\n", salarioBruto);
+    printf(" (-) IR (5 porcento) R$%2.f\n", Ir);
+    printf(" (-) INSS (10 porcento) R$%2.f\n", Inss);
+    printf(" (-) FGTS (11 porcento) R$%2.f\n", Fgts);
+    printf(" Total de descontos     R$%2.f\n", subDiff);
+    printf(" Salário Liquido        R$%2.f\n", salarioLiquido);
+    printf("=============================\n");
+
+    
     return 0;
 }
